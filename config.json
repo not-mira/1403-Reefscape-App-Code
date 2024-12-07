@@ -1,1 +1,164 @@
-
+{
+    "$schema": "../schema.json",
+    "title": "QRScout",
+    "page_title": "HANGINHEXA",
+    "sections": [
+        {
+            "name": "Prematch",
+            "preserveDataOnReset": true,
+            "fields": [
+				{
+                    "code": "name",
+                    "title": "Name",
+                    "type": "text",
+                    "min": 0,
+                    "max": 20,
+                    "required": false
+                },
+                {
+                    "title": "Match Number",
+                    "type": "number",
+                    "required": true,
+                    "code": "matchNumber"
+                },
+                {
+                    "title": "Team Number",
+                    "type": "number",
+                    "required": true,
+                    "code": "team"
+                },
+                {
+                    "title": "Showed Up",
+                    "type": "boolean",
+                    "required": true,
+                    "code": "show"
+                }
+            ]
+        },
+        {
+            "name": "Autonomous",
+            "preserveDataOnReset": false,
+            "fields": [
+                {
+                    "title": "Starting side",
+                    "type": "select",
+                    "required": false,
+                    "code": "starting",
+                    "choices": {
+                        "Source": "Source",
+                        "Amp": "Amp",
+                        "Stage": "Center"
+                    },
+                    "defaultValue": "1"
+                },
+                {
+                    "title": "Goes to midline",
+                    "type": "boolean",
+                    "required": false,
+                    "code": "midline",
+                    "defaultValue": false
+                },
+                {
+                    "title": "Mobility",
+                    "type": "boolean",
+                    "required": false,
+                    "defaultValue": false,
+                    "code": "mobility"
+                },
+                {
+                    "title": "Amp",
+                    "type": "counter",
+                    "defaultValue": 0,
+                    "required": false,
+                    "code": "ampA"
+                },
+                {
+                    "title": "Speaker",
+                    "type": "counter",
+                    "defaultValue": 0,
+                    "required": false,
+                    "code": "speakerA"
+                },
+                {
+                    "title": "Failed",
+                    "type": "counter",
+                    "defaultValue": 0,
+                    "required": false,
+                    "code": "failedA"
+                }
+            ]
+        },
+        {
+            "name": "Teleop",
+            "fields": [
+                {
+                    "code": "ampT",
+                    "title": "Amp",
+                    "type": "counter",
+                    "defaultValue": 0,
+                    "required": false
+                },
+                {
+                    "code": "speakerT",
+                    "title": "Speaker",
+                    "type": "counter",
+                    "defaultValue": 0,
+                    "required": false
+                },
+                {
+                    "code": "passedT",
+                    "title": "Passed",
+                    "type": "counter",
+                    "defaultValue": 0,
+                    "required": false
+                },
+                {
+                    "code": "missedT",
+                    "title": "Missed",
+                    "type": "counter",
+                    "defaultValue": 0,
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "Endgame",
+            "fields": [
+              {
+                "code": "onstage",
+                "title": "Onstage",
+                "type": "boolean",
+                "defaultValue": false,
+                "required": false
+              },
+              {
+                "code": "harmony",
+                "title": "Harmony",
+                "type": "boolean",
+                "defaultValue": false,
+                "required": false
+              },
+              {
+                "code": "trap",
+                "title": "Trap",
+                "type": "boolean",
+                "defaultValue": false,
+                "required": false
+              }
+            ]
+        },
+        {
+            "name": "Postmatch",
+            "fields": [
+                {
+                    "code": "comments",
+                    "title": "Comments",
+                    "type": "text",
+                    "min": 0,
+                    "max": 99999,
+                    "required": false
+                }
+            ]
+        }
+    ]
+}
