@@ -21,6 +21,19 @@
                     "required": true,
                     "code": "matchNumber"
                 },
+		{
+                    "title": "Scouting Position",
+                    "type": "select",
+                    "required": false,
+                    "code": "starting",
+                    "choices": {
+                        "Red 1": "Red 1",
+                        "Red 2": "Red 2",
+                        "Red 3": "Red 3",
+			"Blue 1": "Blue 1",
+			"Blue 2": "Blue 2",
+			"Blue 3": "Blue 3",
+                },
                 {
                     "title": "Team Number",
                     "type": "number",
@@ -32,7 +45,7 @@
                     "type": "boolean",
                     "required": true,
                     "code": "show"
-                }
+		}
             ]
         },
         {
@@ -45,39 +58,45 @@
                     "required": false,
                     "code": "starting",
                     "choices": {
-                        "Source": "Source",
-                        "Amp": "Amp",
-                        "Stage": "Center"
+                        "Runner": "Runner",
+                        "Center": "Center",
+                        "Deposit": "Deposit"
                     },
                     "defaultValue": "1"
                 },
                 {
-                    "title": "Goes to midline",
-                    "type": "boolean",
-                    "required": false,
-                    "code": "midline",
-                    "defaultValue": false
-                },
-                {
                     "title": "Mobility",
                     "type": "boolean",
-                    "required": false,
+                    "required": true,
                     "defaultValue": false,
                     "code": "mobility"
                 },
                 {
-                    "title": "Amp",
+                    "title": "Low Hexa",
                     "type": "counter",
                     "defaultValue": 0,
-                    "required": false,
-                    "code": "ampA"
+		    "min": 0,
+                    "max": 99999,
+                    "required": true,
+                    "code": "lhexaA"
                 },
                 {
-                    "title": "Speaker",
+                    "title": "Mid Hexa",
                     "type": "counter",
                     "defaultValue": 0,
-                    "required": false,
-                    "code": "speakerA"
+		    "min": 0,
+                    "max": 99999,
+                    "required": true,
+                    "code": "mhexaA"
+                },
+		{
+                    "title": "High Hexa",
+                    "type": "counter",
+                    "defaultValue": 0,
+		    "min": 0,
+                    "max": 99999,
+                    "required": true,
+                    "code": "hhexaA"
                 },
                 {
                     "title": "Failed",
@@ -92,18 +111,31 @@
             "name": "Teleop",
             "fields": [
                 {
-                    "code": "ampT",
-                    "title": "Amp",
+                    "title": "Low Hexa",
                     "type": "counter",
                     "defaultValue": 0,
-                    "required": false
+		    "min": 0,
+                    "max": 99999,
+                    "required": true
+		    "code": "lhexaT",
                 },
                 {
-                    "code": "speakerT",
-                    "title": "Speaker",
+                    "title": "Mid Hexa",
                     "type": "counter",
                     "defaultValue": 0,
-                    "required": false
+		    "min": 0,
+                    "max": 99999,
+                    "required": true
+		    "code": "mhexaT"
+                },
+                {
+                    "title": "High Hexa",
+                    "type": "counter",
+                    "defaultValue": 0,
+		    "min": 0,
+                    "max": 99999,
+                    "required": true
+		    "code": "hhexaT"
                 },
                 {
                     "code": "passedT",
