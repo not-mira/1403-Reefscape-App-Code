@@ -176,7 +176,7 @@
                 "type": "boolean",
                 "defaultValue": false,
                 "required": false
-              }
+              } 
             ]
         },
         {
