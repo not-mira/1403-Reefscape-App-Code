@@ -1,218 +1,219 @@
 {
-    "title": "QRScout",
-    "page_title": "REEFSCAPE",
-    "delimiter": "\t",
-    "teamNumber": 1403,
-    "sections": [
+  "$schema": "https://frc2713.github.io/QRScout/schema.json",  
+  "title": "QRScout",
+  "page_title": "REEFSCAPE",
+  "delimiter": "\t",
+  "teamNumber": 1403,
+  "sections": [
+    {
+      "name": "Prematch",
+      "preserveDataOnReset": true,
+      "fields": [
         {
-            "name": "Prematch",
-            "preserveDataOnReset": true,
-            "fields": [
-				{
-                    "code": "name",
-                    "title": "Name",
-                    "type": "text",
-                    "min": 0,
-                    "max": 20,
-                    "required": false
-                },
-                {
-                    "title": "Match Number",
-                    "type": "number",
-                    "required": true,
-                    "code": "matchNumber"
-                },
-		            {
-                    "title": "Scouting Position",
-                    "type": "select",
-                    "required": false,
-                    "code": "starting",
-                    "choices": {
-                        "Red 1": "Red 1",
-                        "Red 2": "Red 2",
-                        "Red 3": "Red 3",
-			                  "Blue 1": "Blue 1",
-			                  "Blue 2": "Blue 2",
-			                  "Blue 3": "Blue 3" 
-                    }
-                },
-                {
-                    "title": "Team Number",
-                    "type": "number",
-                    "required": true,
-                    "code": "team"
-                },
-                {
-                    "title": "Showed Up",
-                    "type": "boolean",
-                    "required": true,
-                    "code": "show"
-		}
-            ]
+          "code": "name",
+          "title": "Name",
+          "type": "text",
+          "min": 0,
+          "max": 20,
+          "required": false
         },
         {
-            "name": "Autonomous",
-            "preserveDataOnReset": false,
-            "fields": [
-                {
-                    "title": "Starting side",
-                    "type": "select",
-                    "required": false,
-                    "code": "starting",
-                    "choices": {
-                        "Far Side": "Far Side",
-                        "Center": "Center",
-                        "Top Side": "Top Side"
-                    },
-                    "defaultValue": "1"
-                },
-                {
-                    "title": "Mobility",
-                    "type": "boolean",
-                    "required": true,
-                    "defaultValue": false,
-                    "code": "mobility"
-                },
-                {
-                    "title": "L1",
-                    "type": "counter",
-                    "defaultValue": 0,
-		    "min": 0,
-                    "max": 99999,
-                    "required": true,
-                    "code": "l1A"
-                },
-                {
-                    "title": "L2",
-                    "type": "counter",
-                    "defaultValue": 0,
-		    "min": 0,
-                    "max": 99999,
-                    "required": true,
-                    "code": "l2A"
-                },
-		{
-                    "title": "L3",
-                    "type": "counter",
-                    "defaultValue": 0,
-		    "min": 0,
-                    "max": 99999,
-                    "required": true,
-                    "code": "l3A"
-                },
-		{
-                    "title": "L4",
-                    "type": "counter",
-                    "defaultValue": 0,
-		    "min": 0,
-                    "max": 99999,
-                    "required": true,
-                    "code": "l4A"
-                },
-		{
-                    "title": "Algae",
-                    "type": "counter",
-                    "defaultValue": 0,
-		    "min": 0,
-                    "max": 99999,
-                    "required": true,
-                    "code": "alA"
-                },
-                {
-                    "title": "Failed",
-                    "type": "counter",
-                    "defaultValue": 0,
-                    "required": false,
-                    "code": "failedA"
-                }
-            ]
+          "title": "Match Number",
+          "type": "number",
+          "required": true,
+          "code": "matchNumber"
         },
         {
-            "name": "Teleop",
-            "fields": [
-                {
-                    "title": "L1",
-                    "type": "counter",
-                    "defaultValue": 0,
-		    "min": 0,
-                    "max": 99999,
-                    "required": true,
-		                "code": "l1T"
-                },
-                {
-                    "title": "L2",
-                    "type": "counter",
-                    "defaultValue": 0,
-		                "min": 0,
-                    "max": 99999,
-                    "required": true,
-		                "code": "l2T"
-                },
-                {
-                    "title": "L3",
-                    "type": "counter",
-                    "defaultValue": 0,
-		    "min": 0,
-                    "max": 99999,
-                    "required": true,
-		                "code": "l3T"
-                },
-                {
-                    "title": "L4",
-                    "type": "counter",
-                    "defaultValue": 0,
-		                "min": 0,
-                    "max": 99999,
-                    "required": true,
-		                "code": "l4T"
-                },
-                {
-                    "code": "missedT",
-                    "title": "Missed",
-                    "type": "counter",
-                    "defaultValue": 0,
-                    "required": false
-                }
-            ]
+          "title": "Scouting Position",
+          "type": "select",
+          "required": false,
+          "code": "starting",
+          "choices": {
+            "Red 1": "Red 1",
+            "Red 2": "Red 2",
+            "Red 3": "Red 3",
+            "Blue 1": "Blue 1",
+            "Blue 2": "Blue 2",
+            "Blue 3": "Blue 3"
+          }
         },
         {
-            "name": "Endgame",
-            "fields": [
-              {
-                "code": "Deep Cage",
-                "title": "Deep Cage",
-                "type": "boolean",
-                "defaultValue": false,
-                "required": false
-              },
-              {
-                "code": "Shallow Cage",
-                "title": "Shallow Cage",
-                "type": "boolean",
-                "defaultValue": false,
-                "required": false
-              },
-              {
-                "code": "Park",
-                "title": "Park",
-                "type": "boolean",
-                "defaultValue": false,
-                "required": false
-              } 
-            ]
+          "title": "Team Number",
+          "type": "number",
+          "required": true,
+          "code": "team"
         },
         {
-            "name": "Postmatch",
-            "fields": [
-                {
-                    "code": "comments",
-                    "title": "Comments",
-                    "type": "text",
-                    "min": 0,
-                    "max": 99999,
-                    "required": false
-                }
-            ]
+          "title": "Showed Up",
+          "type": "boolean",
+          "required": true,
+          "code": "show"
         }
-    ]
+      ]
+    },
+    {
+      "name": "Autonomous",
+      "preserveDataOnReset": false,
+      "fields": [
+        {
+          "title": "Starting side",
+          "type": "select",
+          "required": false,
+          "code": "starting",
+          "choices": {
+            "Far Side": "Far Side",
+            "Center": "Center",
+            "Top Side": "Top Side"
+          },
+          "defaultValue": "1"
+        },
+        {
+          "title": "Mobility",
+          "type": "boolean",
+          "required": true,
+          "defaultValue": false,
+          "code": "mobility"
+        },
+        {
+          "title": "L1",
+          "type": "counter",
+          "defaultValue": 0,
+          "min": 0,
+          "max": 99999,
+          "required": true,
+          "code": "l1A"
+        },
+        {
+          "title": "L2",
+          "type": "counter",
+          "defaultValue": 0,
+          "min": 0,
+          "max": 99999,
+          "required": true,
+          "code": "l2A"
+        },
+        {
+          "title": "L3",
+          "type": "counter",
+          "defaultValue": 0,
+          "min": 0,
+          "max": 99999,
+          "required": true,
+          "code": "l3A"
+        },
+        {
+          "title": "L4",
+          "type": "counter",
+          "defaultValue": 0,
+          "min": 0,
+          "max": 99999,
+          "required": true,
+          "code": "l4A"
+        },
+        {
+          "title": "Algae",
+          "type": "counter",
+          "defaultValue": 0,
+          "min": 0,
+          "max": 99999,
+          "required": true,
+          "code": "alA"
+        },
+        {
+          "title": "Failed",
+          "type": "counter",
+          "defaultValue": 0,
+          "required": false,
+          "code": "failedA"
+        }
+      ]
+    },
+    {
+      "name": "Teleop",
+      "fields": [
+        {
+          "title": "L1",
+          "type": "counter",
+          "defaultValue": 0,
+          "min": 0,
+          "max": 99999,
+          "required": true,
+          "code": "l1T"
+        },
+        {
+          "title": "L2",
+          "type": "counter",
+          "defaultValue": 0,
+          "min": 0,
+          "max": 99999,
+          "required": true,
+          "code": "l2T"
+        },
+        {
+          "title": "L3",
+          "type": "counter",
+          "defaultValue": 0,
+          "min": 0,
+          "max": 99999,
+          "required": true,
+          "code": "l3T"
+        },
+        {
+          "title": "L4",
+          "type": "counter",
+          "defaultValue": 0,
+          "min": 0,
+          "max": 99999,
+          "required": true,
+          "code": "l4T"
+        },
+        {
+          "code": "missedT",
+          "title": "Missed",
+          "type": "counter",
+          "defaultValue": 0,
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "Endgame",
+      "fields": [
+        {
+          "code": "Deep Cage",
+          "title": "Deep Cage",
+          "type": "boolean",
+          "defaultValue": false,
+          "required": false
+        },
+        {
+          "code": "Shallow Cage",
+          "title": "Shallow Cage",
+          "type": "boolean",
+          "defaultValue": false,
+          "required": false
+        },
+        {
+          "code": "Park",
+          "title": "Park",
+          "type": "boolean",
+          "defaultValue": false,
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "Postmatch",
+      "fields": [
+        {
+          "code": "comments",
+          "title": "Comments",
+          "type": "text",
+          "min": 0,
+          "max": 99999,
+          "required": false
+        }
+      ]
+    }
+  ]
 }
