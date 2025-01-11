@@ -1,2 +1,2 @@
-# 1403-Mock-Build-Season-Code
-HANGINHEXA json config for 2713 app
+# 1403-Reefscape-Config
+REEFSCPAE json config for 2713 app QRScout
