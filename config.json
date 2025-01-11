@@ -1,5 +1,5 @@
 {
-  "$schema": "https://frc2713.github.io/QRScout/schema.json",  
+  "$schema": "https://frc2713.github.io/QRScout/schema.json",
   "title": "QRScout",
   "page_title": "REEFSCAPE",
   "delimiter": "\t",
@@ -111,16 +111,25 @@
           "code": "l4A"
         },
         {
-          "title": "Algae",
+          "title": "Algae Processor",
           "type": "counter",
           "defaultValue": 0,
           "min": 0,
           "max": 99999,
           "required": true,
-          "code": "alA"
+          "code": "alPA"
         },
         {
-          "title": "Failed",
+          "title": "Algae Net",
+          "type": "counter",
+          "defaultValue": 0,
+          "min": 0,
+          "max": 99999,
+          "required": true,
+          "code": "alNA"
+        },
+        {
+          "title": "Failed Coral",
           "type": "counter",
           "defaultValue": 0,
           "required": false,
@@ -166,6 +175,24 @@
           "max": 99999,
           "required": true,
           "code": "l4T"
+        },
+        {
+          "title": "Algae Processor",
+          "type": "counter",
+          "defaultValue": 0,
+          "min": 0,
+          "max": 99999,
+          "required": true,
+          "code": "alPT"
+        },
+        {
+          "title": "Algae Net",
+          "type": "counter",
+          "defaultValue": 0,
+          "min": 0,
+          "max": 99999,
+          "required": true,
+          "code": "alNT"
         },
         {
           "code": "missedT",
