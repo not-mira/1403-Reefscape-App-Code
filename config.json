@@ -1,7 +1,8 @@
 {
-    "$schema": "../schema.json",
     "title": "QRScout",
-    "page_title": "HANGINHEXA",
+    "page_title": "REEFSCAPE",
+    "delimiter": "\t",
+    "teamNumber": 1403,
     "sections": [
         {
             "name": "Prematch",
@@ -21,7 +22,7 @@
                     "required": true,
                     "code": "matchNumber"
                 },
-		{
+		            {
                     "title": "Scouting Position",
                     "type": "select",
                     "required": false,
@@ -30,9 +31,10 @@
                         "Red 1": "Red 1",
                         "Red 2": "Red 2",
                         "Red 3": "Red 3",
-			"Blue 1": "Blue 1",
-			"Blue 2": "Blue 2",
-			"Blue 3": "Blue 3",
+			                  "Blue 1": "Blue 1",
+			                  "Blue 2": "Blue 2",
+			                  "Blue 3": "Blue 3" 
+                    }
                 },
                 {
                     "title": "Team Number",
@@ -58,9 +60,9 @@
                     "required": false,
                     "code": "starting",
                     "choices": {
-                        "Runner": "Runner",
+                        "Far Side": "Far Side",
                         "Center": "Center",
-                        "Deposit": "Deposit"
+                        "Top Side": "Top Side"
                     },
                     "defaultValue": "1"
                 },
@@ -72,31 +74,49 @@
                     "code": "mobility"
                 },
                 {
-                    "title": "Low Hexa",
+                    "title": "L1",
                     "type": "counter",
                     "defaultValue": 0,
 		    "min": 0,
                     "max": 99999,
                     "required": true,
-                    "code": "lhexaA"
+                    "code": "l1A"
                 },
                 {
-                    "title": "Mid Hexa",
+                    "title": "L2",
                     "type": "counter",
                     "defaultValue": 0,
 		    "min": 0,
                     "max": 99999,
                     "required": true,
-                    "code": "mhexaA"
+                    "code": "l2A"
                 },
 		{
-                    "title": "High Hexa",
+                    "title": "L3",
                     "type": "counter",
                     "defaultValue": 0,
 		    "min": 0,
                     "max": 99999,
                     "required": true,
-                    "code": "hhexaA"
+                    "code": "l3A"
+                },
+		{
+                    "title": "L4",
+                    "type": "counter",
+                    "defaultValue": 0,
+		    "min": 0,
+                    "max": 99999,
+                    "required": true,
+                    "code": "l4A"
+                },
+		{
+                    "title": "Algae",
+                    "type": "counter",
+                    "defaultValue": 0,
+		    "min": 0,
+                    "max": 99999,
+                    "required": true,
+                    "code": "alA"
                 },
                 {
                     "title": "Failed",
@@ -111,38 +131,40 @@
             "name": "Teleop",
             "fields": [
                 {
-                    "title": "Low Hexa",
+                    "title": "L1",
                     "type": "counter",
                     "defaultValue": 0,
 		    "min": 0,
                     "max": 99999,
-                    "required": true
-		    "code": "lhexaT",
+                    "required": true,
+		                "code": "l1T"
                 },
                 {
-                    "title": "Mid Hexa",
+                    "title": "L2",
+                    "type": "counter",
+                    "defaultValue": 0,
+		                "min": 0,
+                    "max": 99999,
+                    "required": true,
+		                "code": "l2T"
+                },
+                {
+                    "title": "L3",
                     "type": "counter",
                     "defaultValue": 0,
 		    "min": 0,
                     "max": 99999,
-                    "required": true
-		    "code": "mhexaT"
+                    "required": true,
+		                "code": "l3T"
                 },
                 {
-                    "title": "High Hexa",
+                    "title": "L4",
                     "type": "counter",
                     "defaultValue": 0,
-		    "min": 0,
+		                "min": 0,
                     "max": 99999,
-                    "required": true
-		    "code": "hhexaT"
-                },
-                {
-                    "code": "passedT",
-                    "title": "Passed",
-                    "type": "counter",
-                    "defaultValue": 0,
-                    "required": false
+                    "required": true,
+		                "code": "l4T"
                 },
                 {
                     "code": "missedT",
@@ -157,22 +179,22 @@
             "name": "Endgame",
             "fields": [
               {
-                "code": "onstage",
-                "title": "Onstage",
+                "code": "Deep Cage",
+                "title": "Deep Cage",
                 "type": "boolean",
                 "defaultValue": false,
                 "required": false
               },
               {
-                "code": "harmony",
-                "title": "Harmony",
+                "code": "Shallow Cage",
+                "title": "Shallow Cage",
                 "type": "boolean",
                 "defaultValue": false,
                 "required": false
               },
               {
-                "code": "trap",
-                "title": "Trap",
+                "code": "Park",
+                "title": "Park",
                 "type": "boolean",
                 "defaultValue": false,
                 "required": false
