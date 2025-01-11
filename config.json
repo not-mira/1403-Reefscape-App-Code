@@ -183,11 +183,18 @@
           "code": "alNA"
         },
         {
-          "title": "Failed Coral",
+          "title": "Missed Coral",
           "type": "counter",
           "defaultValue": 0,
           "required": false,
-          "code": "failedA"
+          "code": "failedCA"
+        },
+        {
+          "title": "Missed Algae (Net)",
+          "type": "counter",
+          "defaultValue": 0,
+          "required": false,
+          "code": "failedAA"
         }
       ]
     },
@@ -249,8 +256,15 @@
           "code": "alNT"
         },
         {
-          "code": "missedT",
-          "title": "Missed",
+          "code": "missedC",
+          "title": "Missed Coral",
+          "type": "counter",
+          "defaultValue": 0,
+          "required": false
+        },
+        {
+          "code": "missedA",
+          "title": "Missed Algae (Net)",
           "type": "counter",
           "defaultValue": 0,
           "required": false
